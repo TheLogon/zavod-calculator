@@ -1,0 +1,80 @@
+<div class="block">
+	<div class="block__left">
+		<div class="block__title">
+			<i class="_icon-house-plan"></i>
+			<h4>Введите размер стен</h4>
+		</div>
+
+		<div class="block__wrapper">
+			<div class="block__col">
+				<p class="block__col-title">1 этаж 40 х 2,7</p>
+				<div class="block__row">
+					<!-- Блоки -->
+					<div class="block__size">
+						<p class="block__subtitle">Размер блока</p>
+						<label class="select" for="slct">
+							<select id="slct" required="required" style="width: 348px">
+								<option value="" disabled="disabled" selected="selected">Размер блока</option>
+								<option value="#">№2 Блок Энергоэффективный 380*300*588мм</option>
+								<option value="#">№2 Блок Энергоэффективный 380*300*588мм</option>
+								<option value="#">№2 Блок Энергоэффективный 380*300*588мм</option>
+							</select>
+							<i class="_icon-arrow-down"></i>
+						</label>
+						<div class="block__attention">
+							<img src="@img/icons/attention.svg" alt="" />
+							<p>Заменяет 34 кирпича / 4 керамзитоблока</p>
+						</div>
+					</div>
+					<!-- Конец Блоки -->
+					<!-- Марка -->
+					<div class="block__mark">
+						<p class="block__subtitle">Марка блока</p>
+						<label class="select" for="slct">
+							<select id="slct" required="required" style="width: 130px">
+								<option value="" disabled="disabled" selected="selected">Марка блока</option>
+								<option value="#">D 500</option>
+								<option value="#">D 500</option>
+								<option value="#">D 500</option>
+							</select>
+							<i class="_icon-arrow-down"></i>
+						</label>
+						<div class="block__attention">
+							<img src="@img/icons/attention.svg" alt="" />
+							<p>
+								Подходит для <br />
+								несущих наружных и <br />
+								внутренних стен
+							</p>
+						</div>
+					</div>
+					<!-- Конец Марка -->
+				</div>
+			</div>
+			<!-- ----------------------------------------------------------- -->
+			<div class="block__location">
+				<p class="block__subtitle">Расположение блока</p>
+				<div class="block__row">
+					<div class="block__radio">
+						<input id="radio-1" type="radio" name="radio" value="1" />
+						<label for="radio-1">Вертикально</label>
+					</div>
+					<div class="block__radio">
+						<input id="radio-2" type="radio" name="radio" value="2" checked />
+						<label for="radio-2">Горизонтально</label>
+					</div>
+				</div>
+			</div>
+			<!-- ----------------------------------------------------------- -->
+			<div class="block__col">
+				<p class="block__subtitle">Запас на обрезки (%)</p>
+				<input type="number" class="block__input" />
+			</div>
+			<!-- ----------------------------------------------------------- -->
+		</div>
+	</div>
+	<!-- ----------------------------------------------------------- -->
+	<div class="block__right">
+		<img src="@img/block.png" class="block__right_img" alt="" />
+	</div>
+</div>

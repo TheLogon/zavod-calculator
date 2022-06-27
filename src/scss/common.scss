@@ -1,1 +1,146 @@
 // Заголовки, общие БЄМ блоки и проче...
+.header__btn {
+	position: relative;
+	height: 32px;
+	&:hover {
+		.hover__btn {
+			display: block;
+		}
+	}
+}
+.btn {
+	padding: 11px 18px 9px 18px;
+	// .btn__solid
+
+	&__solid {
+		padding: 9px 19px;
+		border: 1px solid $red;
+		color: red;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: fit-content;
+	}
+}
+.hover__btn {
+	position: absolute;
+	top: 15px;
+	left: -10px;
+	display: none;
+}
+
+h1 {
+	font-size: rem(30);
+	text-transform: uppercase;
+}
+h2 {
+	font-size: rem(30);
+	line-height: math.div(30, 30);
+}
+h3 {
+	font-size: rem(13);
+	line-height: math.div(24, 13);
+	color: #ffffff;
+	font-weight: 800;
+	font-family: "Open Sans";
+}
+h4 {
+	position: relative;
+	font-size: rem(14);
+	color: $greyDark;
+	margin-bottom: 5px;
+	text-transform: uppercase;
+	font-family: "Verdana";
+	&:before {
+		content: "";
+		position: absolute;
+		left: 0;
+		bottom: -5px;
+		width: 40px;
+		height: 2px;
+		background-color: $red;
+	}
+}
+
+// Castom select
+
+.select {
+	position: relative;
+}
+.select i {
+	position: absolute;
+	right: 21px;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: rem(6.7);
+}
+.select select {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	padding: 12px 33px 11px 17px;
+	width: 100%;
+	background: #fff;
+	border: 1px solid #b9b9b9;
+	cursor: pointer;
+	font-size: rem(12);
+	line-height: math.div(12, 12);
+	color: $mainColor;
+	font-weight: 700;
+	font-family: "Segoe UI";
+	transition: all 150ms ease;
+}
+.select select:required:invalid {
+	color: #5a667f;
+}
+.select select option {
+	color: $mainColor;
+}
+.select select option[value=""][disabled] {
+	display: none;
+}
+.select select:focus {
+	outline: none;
+}
+
+// Radio btn
+
+.block__radio {
+}
+.block__radio input[type="radio"] {
+	display: none;
+}
+.block__radio label {
+	display: inline-block;
+	cursor: pointer;
+	position: relative;
+	padding-left: 30px;
+	margin-right: 0;
+	font-size: rem(12);
+	color: $mainColor;
+	font-family: "Segoe UI";
+	user-select: none;
+}
+.block__radio label:before {
+	content: "";
+	display: inline-block;
+	width: 13px;
+	height: 13px;
+	background-color: #f2f2f2;
+	border: 1px solid #999a9a;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+/* Checked */
+.block__radio input[type="radio"]:checked + label:before {
+	background: url(../img/icons/check.svg) 0 1px no-repeat;
+	background-size: contain;
+	background-color: #f2f2f2;
+}
+
+/* Hover */
+.block__radio label:hover:before {
+	background: url(../img/icons/check.svg) 0 1px no-repeat;
+}

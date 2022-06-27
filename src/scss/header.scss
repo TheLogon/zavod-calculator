@@ -3,7 +3,7 @@
 //====================================================================================================
 
 //Burger
-/*
+
 .icon-menu {
 	display: none;
 	@media (max-width: $mobile) {
@@ -48,4 +48,148 @@
 		}
 	}
 }
-*/
+
+.header {
+	border-bottom: 1px solid $grey;
+	padding-top: 12px;
+
+	// .header__inner
+
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		row-gap: 23px;
+		i {
+			color: $red;
+			font-size: rem(17);
+		}
+	}
+
+	// .header__top
+
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		column-gap: 5px;
+	}
+
+	// .header__logo
+
+	&__logo {
+	}
+
+	// .header__call
+
+	&__call {
+		display: flex;
+		flex-direction: column;
+		row-gap: 12px;
+		align-items: flex-end;
+		margin-top: 5px;
+	}
+
+	// .header__number
+
+	&__number {
+		display: flex;
+		column-gap: 5px;
+		font-size: rem(20);
+		font-weight: 700;
+		align-items: center;
+	}
+
+	// .header__bottom
+
+	&__bottom {
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	// .header__menu
+
+	&__menu {
+	}
+}
+.data-header {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	row-gap: 11px;
+	// .data-header__clock
+
+	&__clock {
+		display: flex;
+		column-gap: 12px;
+	}
+
+	// .data-header__wrapper
+
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+	}
+
+	// .data-header__text
+
+	&__text {
+		&:first-child {
+			font-size: rem(16);
+			color: $mainColor;
+		}
+		font-size: rem(11);
+		color: $grey;
+	}
+
+	// .data-header__location
+
+	&__location {
+		display: flex;
+		column-gap: 12px;
+		align-items: center;
+	}
+}
+
+.menu {
+	// .menu__icon
+
+	&__icon {
+	}
+
+	// .menu__body
+
+	&__body {
+	}
+
+	// .menu__list
+
+	&__list {
+		display: flex;
+		column-gap: 43px;
+	}
+
+	// .menu__item
+
+	&__item {
+		padding-bottom: 9px;
+		border-bottom: 1px solid $red;
+		transition: all 0.4s ease-in-out;
+		// .menu__item_green
+
+		&_green {
+			border-bottom: 1px solid $green;
+			color: $green;
+		}
+		&:hover {
+			border-width: 5px;
+			transition: all 0.4s ease-in-out;
+			padding-bottom: 4px;
+		}
+	}
+
+	// .menu__link
+
+	&__link {
+		font-size: rem(12);
+		text-transform: uppercase;
+	}
+}

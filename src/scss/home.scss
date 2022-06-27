@@ -1,3 +1,296 @@
 //====================================================================================================
-
+// Home
 //====================================================================================================
+
+/*
+  About
+*/
+
+.about {
+	padding-top: 69px;
+	padding-bottom: 38px;
+	// .about__inner
+
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		row-gap: 50px;
+	}
+
+	// .about__title
+
+	&__title {
+		display: flex;
+		justify-content: center;
+		column-gap: 20px;
+	}
+
+	// .about__dots
+
+	&__dots {
+		display: flex;
+		column-gap: 8px;
+		align-items: center;
+		span {
+			width: 8px;
+			height: 8px;
+			background-color: $red;
+		}
+	}
+
+	// .about__text
+
+	&__text {
+		display: flex;
+		flex-direction: column;
+		row-gap: 27px;
+		p {
+			line-height: math.div(20, 13);
+			&:first-child {
+				text-indent: 26px;
+			}
+			span {
+				color: $red;
+			}
+		}
+	}
+}
+
+/*
+ Track
+*/
+
+ol.progtrckr {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	counter-reset: num;
+}
+
+ol.progtrckr li {
+	display: inline-block;
+	text-align: center;
+	height: 43px;
+	margin-right: -3px;
+}
+ol.progtrckr[data-progtrckr-steps="4"] li {
+	width: 25%;
+}
+
+ol.progtrckr li.progtrckr-item.active {
+	color: $mainColor;
+	border-bottom: 2px solid $blueDark;
+}
+ol.progtrckr li.progtrckr-item {
+	color: #8f8e93;
+	border-bottom: 2px solid #e0dede;
+	font-size: rem(14);
+	white-space: nowrap;
+	font-weight: 600;
+	font-family: "SegoeUI";
+}
+
+ol.progtrckr li:before {
+	position: relative;
+	float: left;
+	left: 50%;
+}
+ol.progtrckr li.progtrckr-item.active:before {
+	color: white;
+	background-color: $blueDark;
+	line-height: math.div(28, 18);
+	border: none;
+	border-radius: rem(15);
+}
+ol.progtrckr li.progtrckr-item:before {
+	content: counter(num);
+	counter-increment: num;
+	color: $mainColor;
+	background-color: #e0dede;
+	font-size: rem(18);
+	font-weight: bold;
+	line-height: math.div(28, 18);
+	height: rem(30);
+	width: rem(30);
+	border: none;
+	border-radius: rem(15);
+	bottom: rem(-27);
+}
+
+/*
+	Calculator
+*/
+
+.calculator {
+	margin-bottom: 71px;
+
+	// .calculator__inner
+
+	&__inner {
+	}
+
+	// .calculator__form
+
+	&__form {
+		margin-top: 28px;
+		padding: 45px 30px 40px 20px;
+		box-shadow: 0 0 1.5px rgb(0 0 0 / 20%);
+	}
+}
+.culculator {
+	// .culculator__head
+
+	&__head {
+	}
+}
+.tab {
+	display: none;
+	&.active {
+		display: flex;
+		flex-direction: column;
+	}
+	&__title {
+		display: flex;
+		column-gap: 20px;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+/*
+	Tab 1
+*/
+
+.calc-1 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	row-gap: 31px;
+	margin-top: 33px;
+	margin-bottom: 29px;
+}
+.block {
+	display: flex;
+	column-gap: 70px;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	padding: 0 67px 0 20px;
+	// .block__left
+
+	&__left {
+	}
+
+	// .block__title
+
+	&__title {
+		display: flex;
+		align-items: center;
+		column-gap: 23px;
+		i {
+			font-size: rem(22);
+			color: $greyDark;
+		}
+	}
+
+	// .block__wrapper
+
+	&__wrapper {
+		margin-left: 49px;
+		margin-top: 13px;
+	}
+
+	// .block__row
+
+	&__row {
+		display: flex;
+		column-gap: 29px;
+	}
+
+	// .block__attention
+
+	&__attention {
+		display: flex;
+		align-items: flex-start;
+		margin-top: 10px;
+		column-gap: 10px;
+		p {
+			font-size: rem(10);
+			color: $mainColor;
+			font-family: "Segoe UI";
+		}
+	}
+
+	// .block__size
+
+	&__size {
+	}
+
+	// .block__subtitle
+
+	&__subtitle {
+		font-size: rem(12);
+		line-height: math.div(18, 12);
+		color: $mainColor;
+		font-weight: bold;
+		font-family: "Segoe UI";
+		margin-bottom: 6px;
+	}
+
+	// .block__mark
+
+	&__mark {
+	}
+
+	// .block__location
+
+	&__location {
+		margin-bottom: 19px;
+	}
+
+	// .block__stock
+
+	&__stock {
+	}
+
+	// .block__col
+
+	&__col {
+		display: flex;
+		flex-direction: column;
+		row-gap: 12px;
+	}
+
+	// .block__radio
+
+	&__radio {
+	}
+
+	// .block__input
+
+	&__input {
+		background-color: #ffffff;
+		border: 1px solid #b9b9b9;
+		padding: 14px 15px;
+		font-size: rem(12);
+		color: $mainColor;
+		font-weight: bold;
+		font-family: "Segoe UI";
+		&:focus {
+			outline: none;
+		}
+	}
+
+	// .block__right
+
+	&__right {
+		// .block__right_img
+
+		&_img {
+		}
+	}
+}
+
+/*
+	Text
+*/
