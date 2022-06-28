@@ -165,14 +165,14 @@ ol.progtrckr li.progtrckr-item:before {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	row-gap: 31px;
+	row-gap: 50px;
 	margin-top: 33px;
 	margin-bottom: 29px;
 }
 .block {
 	display: flex;
 	column-gap: 70px;
-	align-items: center;
+	align-items: stretch;
 	justify-content: space-between;
 	width: 100%;
 	padding: 0 20px;
@@ -191,6 +191,9 @@ ol.progtrckr li.progtrckr-item:before {
 		i {
 			font-size: rem(22);
 			color: $greyDark;
+		}
+		img {
+			width: 22px;
 		}
 	}
 
@@ -280,6 +283,14 @@ ol.progtrckr li.progtrckr-item:before {
 		row-gap: 12px;
 	}
 
+	// .block__col-glue
+
+	&__col-glue {
+		display: flex;
+		flex-direction: column;
+		row-gap: 30px;
+	}
+
 	// .block__radio
 
 	&__radio {
@@ -357,9 +368,73 @@ ol.progtrckr li.progtrckr-item:before {
 	// .block__right
 
 	&__right {
+		width: 41%;
+		position: relative;
 		// .block__right_img
 
 		&_img {
+			margin-top: auto;
+		}
+	}
+	// .block__slider
+
+	&__slider {
+		position: relative;
+		width: 422px;
+	}
+
+	// .block__swiper
+
+	&__swiper {
+	}
+
+	// .block__slide
+
+	&__slide {
+	}
+
+	// .block__arrows
+
+	&__arrows {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 0;
+		right: 0;
+		width: 100%;
+
+		// .block__arrows_prev
+
+		&_prev {
+			cursor: pointer;
+			position: absolute;
+			left: -27px;
+			color: $red;
+			top: 50%;
+			transform: translateY(-50%);
+			&.swiper-button-disabled {
+				color: $greyDark;
+			}
+			i {
+				font-size: rem(46);
+			}
+		}
+
+		// .block__arrows_next
+
+		&_next {
+			cursor: pointer;
+			position: absolute;
+			right: -27px;
+			color: $red;
+			top: 50%;
+			transform: translateY(-50%);
+			&.swiper-button-disabled {
+				color: $greyDark;
+			}
+			i {
+				font-size: rem(46);
+			}
 		}
 	}
 }

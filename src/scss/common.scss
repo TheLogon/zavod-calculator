@@ -28,6 +28,11 @@
 	left: -10px;
 	display: none;
 }
+.rotate-icon {
+	&::before {
+		transform: rotate(180deg);
+	}
+}
 
 h1 {
 	font-size: rem(30);
