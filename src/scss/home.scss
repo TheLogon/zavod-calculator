@@ -175,10 +175,11 @@ ol.progtrckr li.progtrckr-item:before {
 	align-items: center;
 	justify-content: space-between;
 	width: 100%;
-	padding: 0 67px 0 20px;
+	padding: 0 20px;
 	// .block__left
 
 	&__left {
+		width: 55%;
 	}
 
 	// .block__title
@@ -191,6 +192,24 @@ ol.progtrckr li.progtrckr-item:before {
 			font-size: rem(22);
 			color: $greyDark;
 		}
+	}
+
+	// .block__col-title
+
+	&__col-title {
+		font-size: rem(14);
+		line-height: math.div(18, 14);
+		color: $mainColor;
+		font-weight: bold;
+		font-family: "Segoe UI";
+		display: flex;
+		column-gap: 20px;
+	}
+
+	// .block__margin-left
+
+	&__margin-left {
+		margin-left: 10px;
 	}
 
 	// .block__wrapper
@@ -266,12 +285,66 @@ ol.progtrckr li.progtrckr-item:before {
 	&__radio {
 	}
 
+	// .block__spoilers
+
+	&__spoilers {
+		display: flex;
+		flex-direction: column;
+		row-gap: 12px;
+		overflow-y: hidden;
+		height: 137px;
+		transition: height 0.2s ease-in-out;
+	}
+
+	// .block__spoiler
+
+	&__spoiler {
+		button {
+			display: flex;
+			column-gap: 20px;
+		}
+	}
+
+	// .block__btn-spoiler
+
+	&__btn-spoiler {
+		font-size: rem(14);
+		text-transform: uppercase;
+		color: $greyDark;
+		font-family: "Verdana";
+		display: flex;
+		column-gap: 20px;
+		margin-top: 27px;
+		align-items: center;
+		i {
+			font-size: rem(8);
+			transition: all 0.2s ease-in-out;
+		}
+	}
+
+	// .block__spoiler-wrapper
+
+	&__spoiler-wrapper {
+		&.active {
+			.block__spoilers {
+				height: 100%;
+				transition: height 0.2s ease-in-out;
+			}
+			.block__btn-spoiler {
+				i {
+					transform: rotate(180deg);
+					transition: all 0.2s ease-in-out;
+				}
+			}
+		}
+	}
+
 	// .block__input
 
 	&__input {
 		background-color: #ffffff;
 		border: 1px solid #b9b9b9;
-		padding: 14px 15px;
+		padding: 10px 15px;
 		font-size: rem(12);
 		color: $mainColor;
 		font-weight: bold;

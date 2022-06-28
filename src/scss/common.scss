@@ -144,3 +144,48 @@ h4 {
 .block__radio label:hover:before {
 	background: url(../img/icons/check.svg) 0 1px no-repeat;
 }
+
+// Checkbox btn
+
+.block__checkbox {
+	display: flex;
+	align-items: center;
+}
+.block__checkbox input[type="checkbox"] {
+	display: none;
+}
+.block__checkbox label {
+	display: inline-block;
+	cursor: pointer;
+	position: relative;
+	padding-left: 30px;
+	margin-right: 0;
+	font-size: rem(12);
+	color: $mainColor;
+	font-family: "Segoe UI";
+	user-select: none;
+}
+.block__checkbox label:before {
+	content: "";
+	display: inline-block;
+	width: 13px;
+	height: 13px;
+	background-color: #f2f2f2;
+	border: 1px solid #999a9a;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+/* Checked */
+.block__checkbox input[type="checkbox"]:checked + label:before {
+	background: url(../img/icons/check.svg) 0 1px no-repeat;
+	background-size: contain;
+	background-color: #f2f2f2;
+}
+
+/* Hover */
+.block__checkbox label:hover:before {
+	background: url(../img/icons/check.svg) 0 1px no-repeat;
+}
