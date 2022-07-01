@@ -1,0 +1,1650 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Главная</title>
+	<meta charset="UTF-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20220701090756" />
+	<link rel="shortcut icon" href="favicon.ico" />
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap&_v=20220701090756" rel="stylesheet" />
+</head>
+
+<script>
+	console.log("загрузились")
+
+	var slideIndex = 1
+	showSlides(slideIndex)
+
+	/* Функция увеличивает индекс на 1, показывает следующй слайд*/
+	function plusSlide() {
+		showSlides((slideIndex += 1))
+	}
+
+	/* Функция уменьшяет индекс на 1, показывает предыдущий слайд*/
+	function minusSlide() {
+		showSlides((slideIndex -= 1))
+		var tabs = document.getElementsByClassName("progtrckr-item")
+		for (i = 0; i < tabs.length; i++) {
+			tabs[slideIndex].className = tabs[slideIndex].className.replace(" active", "")
+		}
+	}
+
+	/* Устанавливает текущий слайд */
+	function currentSlide(n) {
+		showSlides((slideIndex = n))
+	}
+
+	/* Основная функция слайдера */
+	function showSlides(n) {
+		var i
+		var slides = document.getElementsByClassName("tab")
+		var dots = document.getElementsByClassName("tab-control__item")
+		var tabs = document.getElementsByClassName("progtrckr-item")
+		if (n > slides.length) {
+			slideIndex = 1
+		}
+		if (n < 1) {
+			slideIndex = slides.length
+		}
+		for (i = 0; i < slides.length; i++) {
+			// slides[i].style.display = "none"
+			slides[i].className = slides[i].className.replace(" active", "")
+		}
+		for (i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(" active", "")
+		}
+		// slides[slideIndex - 1].style.display = "block"
+		slides[slideIndex - 1].className += " active"
+		dots[slideIndex - 1].className += " active"
+		tabs[slideIndex - 1].className += " active"
+	}
+</script>
+
+<body>
+	<div class="wrapper">
+		<header class="header" data-scroll="120">
+			<div class="header__container">
+				<div class="header__inner">
+					<div class="header__top">
+						<a href="/" class="header__logo"><img src="img/logo.svg" alt="" /></a>
+						<div class="header__data data-header">
+							<div class="data-header__clock">
+								<i class="_icon-clock"></i>
+								<div class="data-header__wrapper">
+									<p class="data-header__text">Время работы: Пн. - Сб. с 9:00 до 18:00</p>
+									<p class="data-header__text">отгрузка продукции Пн. – Пт. с 9:00 до 15:00</p>
+								</div>
+							</div>
+
+							<div class="data-header__location">
+								<i class="_icon-location"></i>
+								<div class="data-header__wrapper">
+									<p class="data-header__text">г. Краснодар, ст. Марьянская, ул. Соболя, 1/1</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="header__call">
+							<a href="tel:89183777585" class="header__number"><i class="_icon-phone"></i> +7 (918) 377-75-85</a>
+							<div class="header__btn">
+								<a href="#" class="btn__solid">перезвоните мне</a>
+								<div class="hover__btn">
+									<picture><source srcset="img/tip.webp" type="image/webp"><img src="img/tip.png" alt="" /></picture>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="header__bottom">
+						<div class="header__menu menu">
+							<button type="button" class="menu__icon icon-menu"><span></span></button>
+							<nav class="menu__body">
+								<ul class="menu__list">
+									<li class="menu__item"><a href="" class="menu__link">Главная</a></li>
+									<li class="menu__item"><a href="" class="menu__link">Продукция</a></li>
+									<li class="menu__item"><a href="" class="menu__link">Прайс-Лист</a></li>
+									<li class="menu__item"><a href="" class="menu__link">Фотогалерея</a></li>
+									<li class="menu__item"><a href="" class="menu__link">Калькулятор</a></li>
+									<li class="menu__item menu__item_green"><a href="" class="menu__link">Экологичность</a></li>
+									<li class="menu__item"><a href="" class="menu__link">Проекты</a></li>
+									<li class="menu__item"><a href="" class="menu__link">О компании</a></li>
+									<li class="menu__item"><a href="" class="menu__link">Контакты</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main class="page">
+			<section class="about">
+				<div class="about__container">
+					<div class="about__inner">
+						<div class="about__title">
+							<div class="about__dots"><span></span><span></span><span></span></div>
+							<h1>Калькулятор расчета блока</h1>
+						</div>
+						<div class="about__text">
+							<p>
+								Раньше дома и здания строили, особо не задумываясь о теплопроводности. Поэтому делали стены дома толстыми до 1,5 метров, чтобы в доме было тепло и комфортно даже в
+								сильный мороз и прохладно в жаркую погоду. Сейчас делать стены такими толстыми экономически нецелесообразно. В настоящее время существуют материалы, которые могут
+								обеспечить высокие показатели тепловой защиты при меньшей толщине стены, но при таких же прочностных характеристиках.
+							</p>
+							<p>
+								<span>Этот калькулятор</span> поможет выбрать вам нужную вам толщину стен дома в зависимости от вашего региона и от вида материала, который вы собираетесь
+								использовать для несущих стен.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="calculator">
+				<div class="calculator__container">
+					<div class="calculator__inner">
+						<div class="culculator__head">
+							<ol class="progtrckr" data-progtrckr-steps="4">
+								<li class="progtrckr-item active">Наружные несущие стены</li>
+								<li class="progtrckr-item active">Внутренние несущие стены</li>
+								<li class="progtrckr-item active">Внутренние перегородки</li>
+								<li class="progtrckr-item active">Отсчет по расчету</li>
+							</ol>
+						</div>
+						<form action="#" class="calculator__form">
+							<div class="tab">
+								<div class="tab__title">
+									<img src="img/plans/1.svg" alt="" />
+									<h2>Наружные несущие стены</h2>
+								</div>
+								<div class="calc">
+									<div class="block">
+										<div class="block__left">
+											<div class="block__title">
+												<i class="_icon-brick"></i>
+												<h4>Выберите ПАРАМЕТРЫ БЛОКА</h4>
+											</div>
+
+											<div class="block__wrapper">
+												<div class="block__row">
+													<!-- Блоки -->
+													<div class="block__size">
+														<p class="block__subtitle">Размер блока</p>
+														<label class="select" for="slct">
+															<select id="slct" required="required" style="width: 348px">
+																<option value="" disabled="disabled" selected="selected">Размер блока</option>
+																<option value="#">№2 Блок Энергоэффективный 380*300*588мм</option>
+																<option value="#">№2 Блок Энергоэффективный 380*300*588мм</option>
+																<option value="#">№2 Блок Энергоэффективный 380*300*588мм</option>
+															</select>
+															<i class="_icon-arrow-down"></i>
+														</label>
+														<div class="block__attention">
+															<img src="img/icons/attention.svg" alt="" />
+															<p>Заменяет 34 кирпича / 4 керамзитоблока</p>
+														</div>
+													</div>
+													<!-- Конец Блоки -->
+													<!-- Марка -->
+													<div class="block__mark">
+														<p class="block__subtitle">Марка блока</p>
+														<label class="select" for="slct">
+															<select id="slct" required="required" style="width: 130px">
+																<option value="" disabled="disabled" selected="selected">Марка блока</option>
+																<option value="#">D 500</option>
+																<option value="#">D 500</option>
+																<option value="#">D 500</option>
+															</select>
+															<i class="_icon-arrow-down"></i>
+														</label>
+														<div class="block__attention">
+															<img src="img/icons/attention.svg" alt="" />
+															<p>
+																Подходит для <br />
+																несущих наружных и <br />
+																внутренних стен
+															</p>
+														</div>
+													</div>
+													<!-- Конец Марка -->
+												</div>
+												<!-- ----------------------------------------------------------- -->
+												<div class="block__location">
+													<p class="block__subtitle">Расположение блока</p>
+													<div class="block__row">
+														<div class="block__radio">
+															<input id="block-1" type="radio" name="radio" value="1" />
+															<label for="block-1">Вертикально</label>
+														</div>
+														<div class="block__radio">
+															<input id="block-1.2" type="radio" name="radio" value="2" checked />
+															<label for="block-1.2">Горизонтально</label>
+														</div>
+													</div>
+												</div>
+												<!-- ----------------------------------------------------------- -->
+												<div class="block__stock">
+													<p class="block__subtitle">Запас на обрезки (%)</p>
+													<input type="number" class="block__input" />
+												</div>
+												<!-- ----------------------------------------------------------- -->
+											</div>
+										</div>
+										<!-- ----------------------------------------------------------- -->
+										<div class="block__right">
+											<picture><source srcset="img/block.webp" type="image/webp"><img src="img/block.png" class="block__right_img" alt="" /></picture>
+										</div>
+									</div>
+									<div class="block">
+										<div class="block__left">
+											<div class="block__title">
+												<i class="_icon-house-plan"></i>
+												<h4>Введите размер стен</h4>
+											</div>
+
+											<div class="block__wrapper">
+												<div class="block__col">
+													<p class="block__col-title">1 этаж 40 х 2,7</p>
+													<div class="block__margin-left">
+														<div class="block__row">
+															<!-- Блоки -->
+															<div class="block__long">
+																<p class="block__subtitle">Общая длина стен (м)</p>
+																<input type="number" class="block__input" value="40" style="width: 166px" />
+															</div>
+															<!-- Конец Блоки -->
+															<!-- Марка -->
+															<div class="block__mark">
+																<p class="block__subtitle">Высота этажа (м)</p>
+																<label class="select" for="slct">
+																	<select id="slct" required="required" style="width: 166px">
+																		<option value="" disabled="disabled" selected="selected">2,7</option>
+																		<option value="#">2,7</option>
+																		<option value="#">2,7</option>
+																		<option value="#">2,7</option>
+																	</select>
+																	<i class="_icon-arrow-down"></i>
+																</label>
+															</div>
+															<!-- Конец Марка -->
+															<!-- checkbox -->
+															<div class="block__checkbox">
+																<input id="checkbox-3" type="checkbox" name="checkbox" value="6" />
+																<label for="checkbox-3">Подогнать по высоте блока</label>
+															</div>
+															<!-- Конец checkbox -->
+														</div>
+													</div>
+													<p class="block__col-title">2 этаж 40 х 2,7</p>
+													<div class="block__margin-left">
+														<div class="block__row">
+															<!-- Блоки -->
+															<div class="block__long">
+																<p class="block__subtitle">Общая длина стен (м)</p>
+																<input type="number" class="block__input" value="40" style="width: 166px" />
+															</div>
+															<!-- Конец Блоки -->
+															<!-- Марка -->
+															<div class="block__mark">
+																<p class="block__subtitle">Высота этажа (м)</p>
+																<label class="select" for="slct">
+																	<select id="slct" required="required" style="width: 166px">
+																		<option value="" disabled="disabled" selected="selected">2,7</option>
+																		<option value="#">2,7</option>
+																		<option value="#">2,7</option>
+																		<option value="#">2,7</option>
+																	</select>
+																	<i class="_icon-arrow-down"></i>
+																</label>
+															</div>
+															<!-- Конец Марка -->
+															<!-- checkbox -->
+															<div class="block__checkbox">
+																<input id="checkbox-3" type="checkbox" name="checkbox" value="6" />
+																<label for="checkbox-3">Подогнать по высоте блока</label>
+															</div>
+															<!-- Конец checkbox -->
+														</div>
+													</div>
+													<p class="block__col-title">3 этаж 40 х 2,7</p>
+													<div class="block__margin-left">
+														<div class="block__row">
+															<!-- Блоки -->
+															<div class="block__long">
+																<p class="block__subtitle">Общая длина стен (м)</p>
+																<input type="number" class="block__input" value="40" style="width: 166px" />
+															</div>
+															<!-- Конец Блоки -->
+															<!-- Марка -->
+															<div class="block__mark">
+																<p class="block__subtitle">Высота этажа (м)</p>
+																<label class="select" for="slct">
+																	<select id="slct" required="required" style="width: 166px">
+																		<option value="" disabled="disabled" selected="selected">2,7</option>
+																		<option value="#">2,7</option>
+																		<option value="#">2,7</option>
+																		<option value="#">2,7</option>
+																	</select>
+																	<i class="_icon-arrow-down"></i>
+																</label>
+															</div>
+															<!-- Конец Марка -->
+															<!-- checkbox -->
+															<div class="block__checkbox">
+																<input id="checkbox-3" type="checkbox" name="checkbox" value="6" />
+																<label for="checkbox-3">Подогнать по высоте блока</label>
+															</div>
+															<!-- Конец checkbox -->
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- ----------------------------------------------------------- -->
+										<div class="block__right">
+											<picture><source srcset="img/wall-size/1.webp" type="image/webp"><img src="img/wall-size/1.png" class="block__right_img switch__img active__img" alt="" /></picture>
+											<picture><source srcset="img/wall-size/2.webp" type="image/webp"><img src="img/wall-size/2.png" class="block__right_img switch__img" alt="" /></picture>
+											<picture><source srcset="img/wall-size/3.webp" type="image/webp"><img src="img/wall-size/3.png" class="block__right_img switch__img" alt="" /></picture>
+											<picture><source srcset="img/wall-size/4.webp" type="image/webp"><img src="img/wall-size/4.png" class="block__right_img switch__img" alt="" /></picture>
+											<picture><source srcset="img/wall-size/5.webp" type="image/webp"><img src="img/wall-size/5.png" class="block__right_img switch__img" alt="" /></picture>
+										</div>
+									</div>
+									<div class="block">
+										<div class="block__left">
+											<div class="block__title">
+												<i class="_icon-window"></i>
+												<h4>Укажите размеры проемов (оконных/дверных)</h4>
+											</div>
+
+											<div class="block__wrapper">
+												<div class="block__spoiler-wrapper">
+													<div class="block__spoilers">
+														<div class="block__spoiler">
+															<button data-exterior-windows="1"><span>Проем 1</span> 1,6 х 1,5 - 4 шт. (+ по 2 перемычки)</button>
+														</div>
+														<div class="block__spoiler">
+															<button data-exterior-windows="2"><span>Проем 2</span> 1,3 х 2 - 1 шт. (+ перемычка)</button>
+														</div>
+														<div class="block__spoiler">
+															<button data-exterior-windows="3"><span>Проем 3</span> 1,8 х 2 - 3 шт. (+ по 2 перемычки)</button>
+														</div>
+														<div class="block__spoiler">
+															<button data-exterior-windows="4"><span>Проем 4</span> 1,9 х 2 - 3 шт. (+ по 2 перемычки)</button>
+														</div>
+														<div class="block__spoiler">
+															<button data-exterior-windows="5"><span>Проем 5</span> 1,1 х 1,1 - 1шт. (+ перемычка)</button>
+														</div>
+														<div class="block__spoiler">
+															<button data-exterior-windows="6"><span>Проем 6</span> 2 х 1,4 - 4 шт. (+ по 2 перемычки)</button>
+														</div>
+														<div class="block__spoiler">
+															<button data-exterior-windows="7"><span>Проем 7</span> 1,3 х 2,5 - 1 шт. (+ перемычка)</button>
+														</div>
+														<div class="block__spoiler">
+															<button data-exterior-windows="8"><span>Проем 8</span> 0,8 х 1 - 3 шт. (+ по 2 перемычки)</button>
+														</div>
+														<div class="block__spoiler">
+															<button data-exterior-windows="9"><span>Проем 9</span> 0,3 х 0,5 - 2 шт. (+ по 2 перемычки)</button>
+														</div>
+														<div class="block__spoiler">
+															<button data-exterior-windows="10"><span>Проем 10</span> 1 х 1,5 - 2шт. (+ перемычки)</button>
+														</div>
+														<div class="block__spoiler">
+															<button data-exterior-windows="11"><span>Проем 11</span> 0,9 х 1,4 - 1 шт. (+ перемычка)</button>
+														</div>
+														<div class="block__spoiler">
+															<button data-exterior-windows="12"><span>Проем 12</span> 1,1 х 2,1 - 1 шт. (+ перемычка)</button>
+														</div>
+														<div class="block__spoiler">
+															<button data-exterior-windows="13"><span>Проем 13</span> 0,8 х 2,2 - 3 шт. (+ перемычки)</button>
+														</div>
+														<div class="block__spoiler">
+															<button data-exterior-windows="14"><span>Проем 14</span> 1,2 х 0,5 - 2 шт. (+ перемычки)</button>
+														</div>
+														<div class="block__spoiler">
+															<button data-exterior-windows="15"><span>Проем 15</span> 0,7 х 1,5 - 2шт. (+ по 2 перемычки)</button>
+														</div>
+													</div>
+													<button class="block__btn-spoiler">Дополнтельно <i class="_icon-arrow-down"></i></button>
+												</div>
+											</div>
+										</div>
+										<!-- ----------------------------------------------------------- -->
+										<div class="block__right">
+											<picture><source srcset="img/window-opening/1.webp" type="image/webp"><img src="img/window-opening/1.png" class="block__right_img" alt="" /></picture>
+										</div>
+									</div>
+									<div class="block">
+										<div class="block__left">
+											<div class="block__title">
+												<i class="_icon-joist"></i>
+												<h4>Укажите размеры фронтонов</h4>
+											</div>
+
+											<div class="block__wrapper">
+												<div class="block__col">
+													<p class="block__col-title"><span>Фронтон 1</span> 4 х 1,5 - 1шт.</p>
+													<div class="block__margin-left">
+														<div class="block__row">
+															<!-- Блоки -->
+															<div class="block__width">
+																<p class="block__subtitle">Ширина (м)</p>
+																<input type="number" class="block__input" value="4" style="width: 166px" />
+															</div>
+															<!-- Конец Блоки -->
+															<!-- Блоки -->
+															<div class="block__height">
+																<p class="block__subtitle">Высота (м)</p>
+																<input type="number" class="block__input" value="1.5" style="width: 166px" />
+															</div>
+															<!-- Конец Блоки -->
+															<!-- Блоки -->
+															<div class="block__amount">
+																<p class="block__subtitle">Колличество (шт)</p>
+																<input type="number" class="block__input" value="1" style="width: 118px" />
+															</div>
+															<!-- Конец Блоки -->
+														</div>
+													</div>
+													<p class="block__col-title"><span>Фронтон 2</span> 3 х 1 - 1шт.</p>
+													<div class="block__margin-left">
+														<div class="block__row">
+															<!-- Блоки -->
+															<div class="block__width">
+																<p class="block__subtitle">Ширина (м)</p>
+																<input type="number" class="block__input" value="3" style="width: 166px" />
+															</div>
+															<!-- Конец Блоки -->
+															<!-- Блоки -->
+															<div class="block__height">
+																<p class="block__subtitle">Высота (м)</p>
+																<input type="number" class="block__input" value="1" style="width: 166px" />
+															</div>
+															<!-- Конец Блоки -->
+															<!-- Блоки -->
+															<div class="block__amount">
+																<p class="block__subtitle">Колличество (шт)</p>
+																<input type="number" class="block__input" value="1" style="width: 118px" />
+															</div>
+															<!-- Конец Блоки -->
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- ----------------------------------------------------------- -->
+										<div class="block__right">
+											<picture><source srcset="img/front-dimensions/1.webp" type="image/webp"><img src="img/front-dimensions/1.png" class="block__right_img" alt="" /></picture>
+										</div>
+									</div>
+									<div class="block">
+										<div class="block__left">
+											<div class="block__title">
+												<i class="_icon-windows-2"></i>
+												<h4>Укажите размеры Трапециевидных окон</h4>
+											</div>
+
+											<div class="block__wrapper">
+												<div class="block__spoiler-wrapper">
+													<div class="block__spoilers">
+														<div class="block__spoiler">
+															<button data-outer-opening="1"><span>Окно 1</span> 1 х 1,5 х 2 - 2 шт.</button>
+														</div>
+														<div class="block__spoiler">
+															<button data-outer-opening="2"><span>Окно 2</span> 1 х 1,8 х 2,2 - 1шт.</button>
+														</div>
+														<div class="block__spoiler">
+															<button data-outer-opening="3"><span>Окно 3</span> 1,5 х 1,8 х 2,2 - 1шт.</button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- ----------------------------------------------------------- -->
+										<div class="block__right">
+											<picture><source srcset="img/trapezoidal-windows/1.webp" type="image/webp"><img src="img/trapezoidal-windows/1.png" class="block__right_img" alt="" /></picture>
+										</div>
+									</div>
+
+									<div class="block">
+										<div class="block__left">
+											<div class="block__title">
+												<i class="_icon-windows-3"></i>
+												<h4>Укажите размеры круглых окон</h4>
+											</div>
+
+											<div class="block__wrapper">
+												<div class="block__spoiler-wrapper">
+													<div class="block__spoilers">
+														<div class="block__spoiler">
+															<button data-outdoor-round-windows="1"><span>Окно</span> 0,5 х 0,5 - 1 шт. (+ перемычки)</button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- ----------------------------------------------------------- -->
+										<div class="block__right">
+											<picture><source srcset="img/round-windows/1.webp" type="image/webp"><img src="img/round-windows/1.png" class="block__right_img" alt="" /></picture>
+										</div>
+									</div>
+									<div class="block">
+										<div class="block__left">
+											<div class="block__col-glue">
+												<div class="block__left-wrapper">
+													<div class="block__title">
+														<img src="img/icons/glue.svg" alt="" />
+														<h4>Клей</h4>
+													</div>
+
+													<div class="block__wrapper">
+														<div class="block__glue">
+															<p class="block__subtitle">Добавить к рассчёту клей для кладки блока</p>
+															<div class="block__row">
+																<div class="block__radio">
+																	<input id="block-glue" type="radio" name="glue" value="glue" checked />
+																	<label for="block-glue">Добавить</label>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+
+												<div class="block__left-wrapper">
+													<div class="block__title">
+														<img src="img/icons/glue-gung.svg" alt="" />
+														<h4>Пена-Клей</h4>
+													</div>
+
+													<div class="block__wrapper">
+														<div class="block__glue">
+															<p class="block__subtitle">Добавить к рассчёту пена-клей для кладки блока</p>
+															<div class="block__row">
+																<div class="block__radio">
+																	<input id="block-glue-gung" type="radio" name="glue" value="glue-gung" />
+																	<label for="block-glue-gung">Добавить</label>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- ----------------------------------------------------------- -->
+										<div class="block__right">
+											<picture><source srcset="img/glue/glue.webp" type="image/webp"><img src="img/glue/glue.png" class="block__right_img" alt="" /></picture>
+										</div>
+									</div>
+									<div class="block">
+										<div class="block__left">
+											<div class="block__title">
+												<i class="_icon-grid"></i>
+												<h4>Кладочная сетка</h4>
+											</div>
+
+											<div class="block__wrapper">
+												<div class="block__grid">
+													<p class="block__subtitle">Добавить к рассчёту кладочную сетку</p>
+													<div class="block__row">
+														<div class="block__checkbox">
+															<input id="block-grid" type="checkbox" name="glue" value="grid" checked />
+															<label for="block-grid">Добавить</label>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- ----------------------------------------------------------- -->
+										<div class="block__right">
+											<div class="block__slider">
+												<div class="block__swiper">
+													<div class="block__slide">
+														<picture><source srcset="img/grid-slider/1.webp" type="image/webp"><img src="img/grid-slider/1.png" alt="" /></picture>
+													</div>
+													<div class="block__slide">
+														<picture><source srcset="img/grid-slider/2.webp" type="image/webp"><img src="img/grid-slider/2.png" alt="" /></picture>
+													</div>
+												</div>
+											</div>
+											<div class="block__arrows">
+												<div class="block__arrows_prev"><i class="_icon-arrow-slider"></i></div>
+												<div class="block__arrows_next"><i class="_icon-arrow-slider rotate-icon"></i></div>
+											</div>
+										</div>
+									</div>
+
+								</div>
+
+							</div>
+							<div class="tab">
+								<div class="tab__title">
+									<img src="img/plans/2.svg" alt="" />
+									<h2>Внутренние несущие стены</h2>
+								</div>
+								<div class="calc">
+									<div class="block">
+										<div class="block__left">
+											<div class="block__title">
+												<i class="_icon-brick"></i>
+												<h4>Выберите ПАРАМЕТРЫ БЛОКА</h4>
+											</div>
+
+											<div class="block__wrapper">
+												<div class="block__row">
+													<!-- Блоки -->
+													<div class="block__size">
+														<p class="block__subtitle">Размер блока</p>
+														<label class="select" for="slct">
+															<select id="slct" required="required" style="width: 348px">
+																<option value="" disabled="disabled" selected="selected">Размер блока</option>
+																<option value="#">№2 Блок Энергоэффективный 380*300*588мм</option>
+																<option value="#">№2 Блок Энергоэффективный 380*300*588мм</option>
+																<option value="#">№2 Блок Энергоэффективный 380*300*588мм</option>
+															</select>
+															<i class="_icon-arrow-down"></i>
+														</label>
+														<div class="block__attention">
+															<img src="img/icons/attention.svg" alt="" />
+															<p>Заменяет 34 кирпича / 4 керамзитоблока</p>
+														</div>
+													</div>
+													<!-- Конец Блоки -->
+													<!-- Марка -->
+													<div class="block__mark">
+														<p class="block__subtitle">Марка блока</p>
+														<label class="select" for="slct">
+															<select id="slct" required="required" style="width: 130px">
+																<option value="" disabled="disabled" selected="selected">Марка блока</option>
+																<option value="#">D 500</option>
+																<option value="#">D 500</option>
+																<option value="#">D 500</option>
+															</select>
+															<i class="_icon-arrow-down"></i>
+														</label>
+														<div class="block__attention">
+															<img src="img/icons/attention.svg" alt="" />
+															<p>
+																Подходит для <br />
+																несущих наружных и <br />
+																внутренних стен
+															</p>
+														</div>
+													</div>
+													<!-- Конец Марка -->
+												</div>
+												<!-- ----------------------------------------------------------- -->
+												<div class="block__location">
+													<p class="block__subtitle">Расположение блока</p>
+													<div class="block__row">
+														<div class="block__radio">
+															<input id="block-1" type="radio" name="radio" value="1" />
+															<label for="block-1">Вертикально</label>
+														</div>
+														<div class="block__radio">
+															<input id="block-1.2" type="radio" name="radio" value="2" checked />
+															<label for="block-1.2">Горизонтально</label>
+														</div>
+													</div>
+												</div>
+												<!-- ----------------------------------------------------------- -->
+												<div class="block__stock">
+													<p class="block__subtitle">Запас на обрезки (%)</p>
+													<input type="number" class="block__input" />
+												</div>
+												<!-- ----------------------------------------------------------- -->
+											</div>
+										</div>
+										<!-- ----------------------------------------------------------- -->
+										<div class="block__right">
+											<picture><source srcset="img/block.webp" type="image/webp"><img src="img/block.png" class="block__right_img" alt="" /></picture>
+										</div>
+									</div>
+									<div class="block">
+										<div class="block__left">
+											<div class="block__title">
+												<i class="_icon-house-plan"></i>
+												<h4>Введите размер стен</h4>
+											</div>
+
+											<div class="block__wrapper">
+												<div class="block__col">
+													<p class="block__col-title">1 этаж 40 х 2,7</p>
+													<div class="block__margin-left">
+														<div class="block__row">
+															<!-- Блоки -->
+															<div class="block__long">
+																<p class="block__subtitle">Общая длина стен (м)</p>
+																<input type="number" class="block__input" value="40" style="width: 166px" />
+															</div>
+															<!-- Конец Блоки -->
+															<!-- Марка -->
+															<div class="block__mark">
+																<p class="block__subtitle">Высота этажа (м)</p>
+																<label class="select" for="slct">
+																	<select id="slct" required="required" style="width: 166px">
+																		<option value="" disabled="disabled" selected="selected">2,7</option>
+																		<option value="#">2,7</option>
+																		<option value="#">2,7</option>
+																		<option value="#">2,7</option>
+																	</select>
+																	<i class="_icon-arrow-down"></i>
+																</label>
+															</div>
+															<!-- Конец Марка -->
+															<!-- checkbox -->
+															<div class="block__checkbox">
+																<input id="checkbox-3" type="checkbox" name="checkbox" value="6" />
+																<label for="checkbox-3">Подогнать по высоте блока</label>
+															</div>
+															<!-- Конец checkbox -->
+														</div>
+													</div>
+													<p class="block__col-title">2 этаж 40 х 2,7</p>
+													<div class="block__margin-left">
+														<div class="block__row">
+															<!-- Блоки -->
+															<div class="block__long">
+																<p class="block__subtitle">Общая длина стен (м)</p>
+																<input type="number" class="block__input" value="40" style="width: 166px" />
+															</div>
+															<!-- Конец Блоки -->
+															<!-- Марка -->
+															<div class="block__mark">
+																<p class="block__subtitle">Высота этажа (м)</p>
+																<label class="select" for="slct">
+																	<select id="slct" required="required" style="width: 166px">
+																		<option value="" disabled="disabled" selected="selected">2,7</option>
+																		<option value="#">2,7</option>
+																		<option value="#">2,7</option>
+																		<option value="#">2,7</option>
+																	</select>
+																	<i class="_icon-arrow-down"></i>
+																</label>
+															</div>
+															<!-- Конец Марка -->
+															<!-- checkbox -->
+															<div class="block__checkbox">
+																<input id="checkbox-3" type="checkbox" name="checkbox" value="6" />
+																<label for="checkbox-3">Подогнать по высоте блока</label>
+															</div>
+															<!-- Конец checkbox -->
+														</div>
+													</div>
+													<p class="block__col-title">3 этаж 40 х 2,7</p>
+													<div class="block__margin-left">
+														<div class="block__row">
+															<!-- Блоки -->
+															<div class="block__long">
+																<p class="block__subtitle">Общая длина стен (м)</p>
+																<input type="number" class="block__input" value="40" style="width: 166px" />
+															</div>
+															<!-- Конец Блоки -->
+															<!-- Марка -->
+															<div class="block__mark">
+																<p class="block__subtitle">Высота этажа (м)</p>
+																<label class="select" for="slct">
+																	<select id="slct" required="required" style="width: 166px">
+																		<option value="" disabled="disabled" selected="selected">2,7</option>
+																		<option value="#">2,7</option>
+																		<option value="#">2,7</option>
+																		<option value="#">2,7</option>
+																	</select>
+																	<i class="_icon-arrow-down"></i>
+																</label>
+															</div>
+															<!-- Конец Марка -->
+															<!-- checkbox -->
+															<div class="block__checkbox">
+																<input id="checkbox-3" type="checkbox" name="checkbox" value="6" />
+																<label for="checkbox-3">Подогнать по высоте блока</label>
+															</div>
+															<!-- Конец checkbox -->
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- ----------------------------------------------------------- -->
+										<div class="block__right">
+											<picture><source srcset="img/wall-size/1.webp" type="image/webp"><img src="img/wall-size/1.png" class="block__right_img switch__img active__img" alt="" /></picture>
+											<picture><source srcset="img/wall-size/2.webp" type="image/webp"><img src="img/wall-size/2.png" class="block__right_img switch__img" alt="" /></picture>
+											<picture><source srcset="img/wall-size/3.webp" type="image/webp"><img src="img/wall-size/3.png" class="block__right_img switch__img" alt="" /></picture>
+											<picture><source srcset="img/wall-size/4.webp" type="image/webp"><img src="img/wall-size/4.png" class="block__right_img switch__img" alt="" /></picture>
+											<picture><source srcset="img/wall-size/5.webp" type="image/webp"><img src="img/wall-size/5.png" class="block__right_img switch__img" alt="" /></picture>
+										</div>
+									</div>
+									<div class="block">
+										<div class="block__left">
+											<div class="block__title">
+												<i class="_icon-window"></i>
+												<h4>Укажите размеры проемов (оконных/дверных)</h4>
+											</div>
+
+											<div class="block__wrapper">
+												<div class="block__spoiler-wrapper">
+													<div class="block__spoilers">
+														<div class="block__spoiler">
+															<button data-exterior-windows="1"><span>Проем 1</span> 1,6 х 1,5 - 4 шт. (+ по 2 перемычки)</button>
+														</div>
+														<div class="block__spoiler">
+															<button data-exterior-windows="2"><span>Проем 2</span> 1,3 х 2 - 1 шт. (+ перемычка)</button>
+														</div>
+														<div class="block__spoiler">
+															<button data-exterior-windows="3"><span>Проем 3</span> 1,8 х 2 - 3 шт. (+ по 2 перемычки)</button>
+														</div>
+														<div class="block__spoiler">
+															<button data-exterior-windows="4"><span>Проем 4</span> 1,9 х 2 - 3 шт. (+ по 2 перемычки)</button>
+														</div>
+														<div class="block__spoiler">
+															<button data-exterior-windows="5"><span>Проем 5</span> 1,1 х 1,1 - 1шт. (+ перемычка)</button>
+														</div>
+														<div class="block__spoiler">
+															<button data-exterior-windows="6"><span>Проем 6</span> 2 х 1,4 - 4 шт. (+ по 2 перемычки)</button>
+														</div>
+														<div class="block__spoiler">
+															<button data-exterior-windows="7"><span>Проем 7</span> 1,3 х 2,5 - 1 шт. (+ перемычка)</button>
+														</div>
+														<div class="block__spoiler">
+															<button data-exterior-windows="8"><span>Проем 8</span> 0,8 х 1 - 3 шт. (+ по 2 перемычки)</button>
+														</div>
+														<div class="block__spoiler">
+															<button data-exterior-windows="9"><span>Проем 9</span> 0,3 х 0,5 - 2 шт. (+ по 2 перемычки)</button>
+														</div>
+														<div class="block__spoiler">
+															<button data-exterior-windows="10"><span>Проем 10</span> 1 х 1,5 - 2шт. (+ перемычки)</button>
+														</div>
+														<div class="block__spoiler">
+															<button data-exterior-windows="11"><span>Проем 11</span> 0,9 х 1,4 - 1 шт. (+ перемычка)</button>
+														</div>
+														<div class="block__spoiler">
+															<button data-exterior-windows="12"><span>Проем 12</span> 1,1 х 2,1 - 1 шт. (+ перемычка)</button>
+														</div>
+														<div class="block__spoiler">
+															<button data-exterior-windows="13"><span>Проем 13</span> 0,8 х 2,2 - 3 шт. (+ перемычки)</button>
+														</div>
+														<div class="block__spoiler">
+															<button data-exterior-windows="14"><span>Проем 14</span> 1,2 х 0,5 - 2 шт. (+ перемычки)</button>
+														</div>
+														<div class="block__spoiler">
+															<button data-exterior-windows="15"><span>Проем 15</span> 0,7 х 1,5 - 2шт. (+ по 2 перемычки)</button>
+														</div>
+													</div>
+													<button class="block__btn-spoiler">Дополнтельно <i class="_icon-arrow-down"></i></button>
+												</div>
+											</div>
+										</div>
+										<!-- ----------------------------------------------------------- -->
+										<div class="block__right">
+											<picture><source srcset="img/window-opening/1.webp" type="image/webp"><img src="img/window-opening/1.png" class="block__right_img" alt="" /></picture>
+										</div>
+									</div>
+									<div class="block">
+										<div class="block__left">
+											<div class="block__col-glue">
+												<div class="block__left-wrapper">
+													<div class="block__title">
+														<img src="img/icons/glue.svg" alt="" />
+														<h4>Клей</h4>
+													</div>
+
+													<div class="block__wrapper">
+														<div class="block__glue">
+															<p class="block__subtitle">Добавить к рассчёту клей для кладки блока</p>
+															<div class="block__row">
+																<div class="block__radio">
+																	<input id="block-glue" type="radio" name="glue" value="glue" checked />
+																	<label for="block-glue">Добавить</label>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+
+												<div class="block__left-wrapper">
+													<div class="block__title">
+														<img src="img/icons/glue-gung.svg" alt="" />
+														<h4>Пена-Клей</h4>
+													</div>
+
+													<div class="block__wrapper">
+														<div class="block__glue">
+															<p class="block__subtitle">Добавить к рассчёту пена-клей для кладки блока</p>
+															<div class="block__row">
+																<div class="block__radio">
+																	<input id="block-glue-gung" type="radio" name="glue" value="glue-gung" />
+																	<label for="block-glue-gung">Добавить</label>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- ----------------------------------------------------------- -->
+										<div class="block__right">
+											<picture><source srcset="img/glue/glue.webp" type="image/webp"><img src="img/glue/glue.png" class="block__right_img" alt="" /></picture>
+										</div>
+									</div>
+									<div class="block">
+										<div class="block__left">
+											<div class="block__title">
+												<i class="_icon-grid"></i>
+												<h4>Кладочная сетка</h4>
+											</div>
+
+											<div class="block__wrapper">
+												<div class="block__grid">
+													<p class="block__subtitle">Добавить к рассчёту кладочную сетку</p>
+													<div class="block__row">
+														<div class="block__checkbox">
+															<input id="block-grid" type="checkbox" name="glue" value="grid" checked />
+															<label for="block-grid">Добавить</label>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- ----------------------------------------------------------- -->
+										<div class="block__right">
+											<div class="block__slider">
+												<div class="block__swiper">
+													<div class="block__slide">
+														<picture><source srcset="img/grid-slider/1.webp" type="image/webp"><img src="img/grid-slider/1.png" alt="" /></picture>
+													</div>
+													<div class="block__slide">
+														<picture><source srcset="img/grid-slider/2.webp" type="image/webp"><img src="img/grid-slider/2.png" alt="" /></picture>
+													</div>
+												</div>
+											</div>
+											<div class="block__arrows">
+												<div class="block__arrows_prev"><i class="_icon-arrow-slider"></i></div>
+												<div class="block__arrows_next"><i class="_icon-arrow-slider rotate-icon"></i></div>
+											</div>
+										</div>
+									</div>
+
+								</div>
+
+							</div>
+							<div class="tab">
+								<div class="tab__title">
+									<img src="img/plans/3.svg" alt="" />
+									<h2>Внутренние перегородки</h2>
+								</div>
+								<div class="calc">
+									<div class="block">
+										<div class="block__left">
+											<div class="block__title">
+												<i class="_icon-brick"></i>
+												<h4>Выберите ПАРАМЕТРЫ БЛОКА</h4>
+											</div>
+
+											<div class="block__wrapper">
+												<div class="block__row">
+													<!-- Блоки -->
+													<div class="block__size">
+														<p class="block__subtitle">Размер блока</p>
+														<label class="select" for="slct">
+															<select id="slct" required="required" style="width: 348px">
+																<option value="" disabled="disabled" selected="selected">Размер блока</option>
+																<option value="#">№2 Блок Энергоэффективный 380*300*588мм</option>
+																<option value="#">№2 Блок Энергоэффективный 380*300*588мм</option>
+																<option value="#">№2 Блок Энергоэффективный 380*300*588мм</option>
+															</select>
+															<i class="_icon-arrow-down"></i>
+														</label>
+														<div class="block__attention">
+															<img src="img/icons/attention.svg" alt="" />
+															<p>Заменяет 34 кирпича / 4 керамзитоблока</p>
+														</div>
+													</div>
+													<!-- Конец Блоки -->
+													<!-- Марка -->
+													<div class="block__mark">
+														<p class="block__subtitle">Марка блока</p>
+														<label class="select" for="slct">
+															<select id="slct" required="required" style="width: 130px">
+																<option value="" disabled="disabled" selected="selected">Марка блока</option>
+																<option value="#">D 500</option>
+																<option value="#">D 500</option>
+																<option value="#">D 500</option>
+															</select>
+															<i class="_icon-arrow-down"></i>
+														</label>
+														<div class="block__attention">
+															<img src="img/icons/attention.svg" alt="" />
+															<p>
+																Подходит для <br />
+																несущих наружных и <br />
+																внутренних стен
+															</p>
+														</div>
+													</div>
+													<!-- Конец Марка -->
+												</div>
+												<!-- ----------------------------------------------------------- -->
+												<div class="block__location">
+													<p class="block__subtitle">Расположение блока</p>
+													<div class="block__row">
+														<div class="block__radio">
+															<input id="block-1" type="radio" name="radio" value="1" />
+															<label for="block-1">Вертикально</label>
+														</div>
+														<div class="block__radio">
+															<input id="block-1.2" type="radio" name="radio" value="2" checked />
+															<label for="block-1.2">Горизонтально</label>
+														</div>
+													</div>
+												</div>
+												<!-- ----------------------------------------------------------- -->
+												<div class="block__stock">
+													<p class="block__subtitle">Запас на обрезки (%)</p>
+													<input type="number" class="block__input" />
+												</div>
+												<!-- ----------------------------------------------------------- -->
+											</div>
+										</div>
+										<!-- ----------------------------------------------------------- -->
+										<div class="block__right">
+											<picture><source srcset="img/block.webp" type="image/webp"><img src="img/block.png" class="block__right_img" alt="" /></picture>
+										</div>
+									</div>
+									<div class="block">
+										<div class="block__left">
+											<div class="block__title">
+												<i class="_icon-house-plan"></i>
+												<h4>Введите размер стен</h4>
+											</div>
+
+											<div class="block__wrapper">
+												<div class="block__col">
+													<p class="block__col-title">1 этаж 40 х 2,7</p>
+													<div class="block__margin-left">
+														<div class="block__row">
+															<!-- Блоки -->
+															<div class="block__long">
+																<p class="block__subtitle">Общая длина стен (м)</p>
+																<input type="number" class="block__input" value="40" style="width: 166px" />
+															</div>
+															<!-- Конец Блоки -->
+															<!-- Марка -->
+															<div class="block__mark">
+																<p class="block__subtitle">Высота этажа (м)</p>
+																<label class="select" for="slct">
+																	<select id="slct" required="required" style="width: 166px">
+																		<option value="" disabled="disabled" selected="selected">2,7</option>
+																		<option value="#">2,7</option>
+																		<option value="#">2,7</option>
+																		<option value="#">2,7</option>
+																	</select>
+																	<i class="_icon-arrow-down"></i>
+																</label>
+															</div>
+															<!-- Конец Марка -->
+															<!-- checkbox -->
+															<div class="block__checkbox">
+																<input id="checkbox-3" type="checkbox" name="checkbox" value="6" />
+																<label for="checkbox-3">Подогнать по высоте блока</label>
+															</div>
+															<!-- Конец checkbox -->
+														</div>
+													</div>
+													<p class="block__col-title">2 этаж 40 х 2,7</p>
+													<div class="block__margin-left">
+														<div class="block__row">
+															<!-- Блоки -->
+															<div class="block__long">
+																<p class="block__subtitle">Общая длина стен (м)</p>
+																<input type="number" class="block__input" value="40" style="width: 166px" />
+															</div>
+															<!-- Конец Блоки -->
+															<!-- Марка -->
+															<div class="block__mark">
+																<p class="block__subtitle">Высота этажа (м)</p>
+																<label class="select" for="slct">
+																	<select id="slct" required="required" style="width: 166px">
+																		<option value="" disabled="disabled" selected="selected">2,7</option>
+																		<option value="#">2,7</option>
+																		<option value="#">2,7</option>
+																		<option value="#">2,7</option>
+																	</select>
+																	<i class="_icon-arrow-down"></i>
+																</label>
+															</div>
+															<!-- Конец Марка -->
+															<!-- checkbox -->
+															<div class="block__checkbox">
+																<input id="checkbox-3" type="checkbox" name="checkbox" value="6" />
+																<label for="checkbox-3">Подогнать по высоте блока</label>
+															</div>
+															<!-- Конец checkbox -->
+														</div>
+													</div>
+													<p class="block__col-title">3 этаж 40 х 2,7</p>
+													<div class="block__margin-left">
+														<div class="block__row">
+															<!-- Блоки -->
+															<div class="block__long">
+																<p class="block__subtitle">Общая длина стен (м)</p>
+																<input type="number" class="block__input" value="40" style="width: 166px" />
+															</div>
+															<!-- Конец Блоки -->
+															<!-- Марка -->
+															<div class="block__mark">
+																<p class="block__subtitle">Высота этажа (м)</p>
+																<label class="select" for="slct">
+																	<select id="slct" required="required" style="width: 166px">
+																		<option value="" disabled="disabled" selected="selected">2,7</option>
+																		<option value="#">2,7</option>
+																		<option value="#">2,7</option>
+																		<option value="#">2,7</option>
+																	</select>
+																	<i class="_icon-arrow-down"></i>
+																</label>
+															</div>
+															<!-- Конец Марка -->
+															<!-- checkbox -->
+															<div class="block__checkbox">
+																<input id="checkbox-3" type="checkbox" name="checkbox" value="6" />
+																<label for="checkbox-3">Подогнать по высоте блока</label>
+															</div>
+															<!-- Конец checkbox -->
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- ----------------------------------------------------------- -->
+										<div class="block__right">
+											<picture><source srcset="img/wall-size/1.webp" type="image/webp"><img src="img/wall-size/1.png" class="block__right_img switch__img active__img" alt="" /></picture>
+											<picture><source srcset="img/wall-size/2.webp" type="image/webp"><img src="img/wall-size/2.png" class="block__right_img switch__img" alt="" /></picture>
+											<picture><source srcset="img/wall-size/3.webp" type="image/webp"><img src="img/wall-size/3.png" class="block__right_img switch__img" alt="" /></picture>
+											<picture><source srcset="img/wall-size/4.webp" type="image/webp"><img src="img/wall-size/4.png" class="block__right_img switch__img" alt="" /></picture>
+											<picture><source srcset="img/wall-size/5.webp" type="image/webp"><img src="img/wall-size/5.png" class="block__right_img switch__img" alt="" /></picture>
+										</div>
+									</div>
+									<div class="block">
+										<div class="block__left">
+											<div class="block__title">
+												<i class="_icon-window"></i>
+												<h4>Укажите размеры проемов (оконных/дверных)</h4>
+											</div>
+
+											<div class="block__wrapper">
+												<div class="block__spoiler-wrapper">
+													<div class="block__spoilers">
+														<div class="block__spoiler">
+															<button data-exterior-windows="1"><span>Проем 1</span> 1,6 х 1,5 - 4 шт. (+ по 2 перемычки)</button>
+														</div>
+														<div class="block__spoiler">
+															<button data-exterior-windows="2"><span>Проем 2</span> 1,3 х 2 - 1 шт. (+ перемычка)</button>
+														</div>
+														<div class="block__spoiler">
+															<button data-exterior-windows="3"><span>Проем 3</span> 1,8 х 2 - 3 шт. (+ по 2 перемычки)</button>
+														</div>
+														<div class="block__spoiler">
+															<button data-exterior-windows="4"><span>Проем 4</span> 1,9 х 2 - 3 шт. (+ по 2 перемычки)</button>
+														</div>
+														<div class="block__spoiler">
+															<button data-exterior-windows="5"><span>Проем 5</span> 1,1 х 1,1 - 1шт. (+ перемычка)</button>
+														</div>
+														<div class="block__spoiler">
+															<button data-exterior-windows="6"><span>Проем 6</span> 2 х 1,4 - 4 шт. (+ по 2 перемычки)</button>
+														</div>
+														<div class="block__spoiler">
+															<button data-exterior-windows="7"><span>Проем 7</span> 1,3 х 2,5 - 1 шт. (+ перемычка)</button>
+														</div>
+														<div class="block__spoiler">
+															<button data-exterior-windows="8"><span>Проем 8</span> 0,8 х 1 - 3 шт. (+ по 2 перемычки)</button>
+														</div>
+														<div class="block__spoiler">
+															<button data-exterior-windows="9"><span>Проем 9</span> 0,3 х 0,5 - 2 шт. (+ по 2 перемычки)</button>
+														</div>
+														<div class="block__spoiler">
+															<button data-exterior-windows="10"><span>Проем 10</span> 1 х 1,5 - 2шт. (+ перемычки)</button>
+														</div>
+														<div class="block__spoiler">
+															<button data-exterior-windows="11"><span>Проем 11</span> 0,9 х 1,4 - 1 шт. (+ перемычка)</button>
+														</div>
+														<div class="block__spoiler">
+															<button data-exterior-windows="12"><span>Проем 12</span> 1,1 х 2,1 - 1 шт. (+ перемычка)</button>
+														</div>
+														<div class="block__spoiler">
+															<button data-exterior-windows="13"><span>Проем 13</span> 0,8 х 2,2 - 3 шт. (+ перемычки)</button>
+														</div>
+														<div class="block__spoiler">
+															<button data-exterior-windows="14"><span>Проем 14</span> 1,2 х 0,5 - 2 шт. (+ перемычки)</button>
+														</div>
+														<div class="block__spoiler">
+															<button data-exterior-windows="15"><span>Проем 15</span> 0,7 х 1,5 - 2шт. (+ по 2 перемычки)</button>
+														</div>
+													</div>
+													<button class="block__btn-spoiler">Дополнтельно <i class="_icon-arrow-down"></i></button>
+												</div>
+											</div>
+										</div>
+										<!-- ----------------------------------------------------------- -->
+										<div class="block__right">
+											<picture><source srcset="img/window-opening/1.webp" type="image/webp"><img src="img/window-opening/1.png" class="block__right_img" alt="" /></picture>
+										</div>
+									</div>
+								</div>
+
+							</div>
+							<div class="tab active">
+								<div class="calc">
+									<div data-tabs class="tabs">
+										<nav data-tabs-titles class="tabs__navigation">
+											<button type="submit" class="tabs__title _tab-active">
+												<div class="block__title">
+													<img src="img/icons/edit.svg" alt="" />
+													<h4>Введенные данные для расчета</h4>
+												</div>
+												<i class="_icon-arrow-down"></i>
+											</button>
+											<button type="submit" class="tabs__title">
+												<div class="block__title">
+													<div class="block__title_icon">
+														<img src="img/icons/table.svg" alt="" /> <span class="block__title_slesh">/</span>
+														<img src="img/icons/clipboard.svg" alt="" />
+													</div>
+													<h4>краткий РАСЧЕТ</h4>
+												</div>
+												<i class="_icon-arrow-down"></i>
+											</button>
+											<button type="submit" class="tabs__title">
+												<div class="block__title">
+													<img src="img/icons/clipboard.svg" alt="" />
+													<h4>ДЕТАЛЬНЫЙ РАСЧЕТ</h4>
+												</div>
+												<i class="_icon-arrow-down"></i>
+											</button>
+										</nav>
+										<div class="tabs-head">
+											<div class="tabs-head__item">
+												<img src="img/plans/1.svg" alt="" />
+												<p>Наружные несущие стены</p>
+											</div>
+											<div class="tabs-head__item">
+												<img src="img/plans/2.svg" alt="" />
+												<p>Внутренние несущие стены</p>
+											</div>
+											<div class="tabs-head__item">
+												<img src="img/plans/3.svg" alt="" />
+												<p>Внутренние перегородки</p>
+											</div>
+										</div>
+										<div data-tabs-body class="tabs__content">
+											<div class="tabs__body">
+												<div class="tabs__body_col">
+													<div class="tabs__body_section">
+														<div class="block__title">
+															<i class="_icon-brick"></i>
+															<h4>параметры блока</h4>
+														</div>
+														<div class="section-inner">
+															<div class="section-inner__table">
+																<table class="table">
+																	<tbody class="table__body">
+																		<tr class="table__row">
+																			<td class="table__col">Размер блока</td>
+																			<td class="table__col">Блок №2 380*300*588мм</td>
+																			<td class="table__col">Блок №2 380*300*588мм</td>
+																			<td class="table__col">Блок №2 380*300*588мм</td>
+																		</tr>
+																		<tr class="table__row">
+																			<td class="table__col">Марка блока</td>
+																			<td class="table__col">D 500</td>
+																			<td class="table__col">D 500</td>
+																			<td class="table__col">D 400</td>
+																		</tr>
+																		<tr class="table__row">
+																			<td class="table__col">Расположение блока при расчете</td>
+																			<td class="table__col">Горизонтальное</td>
+																			<td class="table__col">Горизонтальное</td>
+																			<td class="table__col">Вертикальное</td>
+																		</tr>
+																		<tr class="table__row">
+																			<td class="table__col">Запас на обрезки</td>
+																			<td class="table__col">3 %</td>
+																			<td class="table__col">3 %</td>
+																			<td class="table__col">3 %</td>
+																		</tr>
+																	</tbody>
+																</table>
+															</div>
+															<div class="section-inner__img">
+																<picture><source srcset="img/block-2.webp" type="image/webp"><img src="img/block-2.png" alt="" /></picture>
+															</div>
+														</div>
+													</div>
+													<div class="tabs__body_section">
+														<div class="block__title">
+															<i class="_icon-house-plan"></i>
+															<h4>Размер стен</h4>
+														</div>
+														<div class="section-inner">
+															<div class="section-inner__table">
+																<table class="table">
+																	<tbody class="table__body">
+																		<tr class="table__row">
+																			<td class="table__col">1 этаж (длина и высота)</td>
+																			<td class="table__col">40 х 2,7 м</td>
+																			<td class="table__col">40 х 2,7 м</td>
+																			<td class="table__col">40 х 2,7 м</td>
+																		</tr>
+																		<tr class="table__row">
+																			<td class="table__col">2 этаж (длина и высота)</td>
+																			<td class="table__col">40 х 2,7 м</td>
+																			<td class="table__col">40 х 2,7 м</td>
+																			<td class="table__col">40 х 2,7 м</td>
+																		</tr>
+																		<tr class="table__row">
+																			<td class="table__col">3 этаж (длина и высота)</td>
+																			<td class="table__col">40 х 2,7 м</td>
+																			<td class="table__col">40 х 2,7 м</td>
+																			<td class="table__col">40 х 2,7 м</td>
+																		</tr>
+																	</tbody>
+																</table>
+															</div>
+															<div class="section-inner__img">
+																<picture><source srcset="img/plans/plans.webp" type="image/webp"><img src="img/plans/plans.png" alt="" /></picture>
+															</div>
+														</div>
+													</div>
+													<div class="tabs__body_section">
+														<div class="block__title">
+															<i class="_icon-window"></i>
+															<h4>Размеры проемов</h4>
+														</div>
+														<div class="section-inner">
+															<div class="section-inner__table">
+																<table class="table">
+																	<tbody class="table__body">
+																		<tr class="table__row">
+																			<td class="table__col">1 проем (ширина, высота и количество)</td>
+																			<td class="table__col">1,6 х 1,4 - 4 шт. (+по 2 перемычки)</td>
+																			<td class="table__col">1 х 1,7 - 4 шт. (+перемычка)</td>
+																			<td class="table__col">1 х 1,7 - 2 шт. (+перемычка)</td>
+																		</tr>
+																		<tr class="table__row">
+																			<td class="table__col">2 проем (ширина, высота и количество)</td>
+																			<td class="table__col">1,6 х 1,4 - 4 шт. (+по 2 перемычки)</td>
+																			<td class="table__col">1 х 1,7 - 4 шт. (+перемычка)</td>
+																			<td class="table__col">1 х 1,7 - 2 шт. (+перемычка)</td>
+																		</tr>
+																		<tr class="table__row">
+																			<td class="table__col">3 проем (ширина, высота и количество)</td>
+																			<td class="table__col">1,6 х 1,4 - 4 шт. (+по 2 перемычки)</td>
+																			<td class="table__col">1 х 1,7 - 4 шт. (+перемычка)</td>
+																			<td class="table__col">-</td>
+																		</tr>
+																		<tr class="table__row">
+																			<td class="table__col">4 проем (ширина, высота и количество)</td>
+																			<td class="table__col">1,6 х 1,4 - 4 шт. (+по 2 перемычки)</td>
+																			<td class="table__col">-</td>
+																			<td class="table__col">-</td>
+																		</tr>
+																	</tbody>
+																</table>
+															</div>
+															<div class="section-inner__img">
+																<picture><source srcset="img/window-opening/4.webp" type="image/webp"><img src="img/window-opening/4.png" alt="" /></picture>
+															</div>
+														</div>
+													</div>
+													<div class="tabs__body_section">
+														<div class="block__title">
+															<i class="_icon-joist"></i>
+															<h4>Размеры фронтов</h4>
+														</div>
+														<div class="section-inner">
+															<div class="section-inner__table">
+																<table class="table">
+																	<tbody class="table__body">
+																		<tr class="table__row">
+																			<td class="table__col">1 фронтон (ширина, высота и количество)</td>
+																			<td class="table__col">4 х 1,4 - 1 шт.</td>
+																			<td class="table__col">-</td>
+																			<td class="table__col">-</td>
+																		</tr>
+																		<tr class="table__row">
+																			<td class="table__col">2 фронтон (ширина, высота и количество)</td>
+																			<td class="table__col">4 х 1,4 - 1 шт.</td>
+																			<td class="table__col">-</td>
+																			<td class="table__col">-</td>
+																		</tr>
+																	</tbody>
+																</table>
+															</div>
+															<div class="section-inner__img">
+																<picture><source srcset="img/front-dimensions/9.webp" type="image/webp"><img src="img/front-dimensions/9.png" alt="" /></picture>
+															</div>
+														</div>
+													</div>
+													<div class="tabs__body_section">
+														<div class="block__title">
+															<i class="_icon-windows-2"></i>
+															<h4>Размеры трапецевидных окон</h4>
+														</div>
+														<div class="section-inner">
+															<div class="section-inner__table">
+																<table class="table">
+																	<tbody class="table__body">
+																		<tr class="table__row">
+																			<td class="table__col">1 окно</td>
+																			<td class="table__col">1 х 1,5 х 1,5 - 2 шт.</td>
+																			<td class="table__col">-</td>
+																			<td class="table__col">-</td>
+																		</tr>
+																		<tr class="table__row">
+																			<td class="table__col">2 окно</td>
+																			<td class="table__col">1 х 1,5 х 1,5 - 2 шт.</td>
+																			<td class="table__col">-</td>
+																			<td class="table__col">-</td>
+																		</tr>
+																		<tr class="table__row">
+																			<td class="table__col">3 окно</td>
+																			<td class="table__col">1 х 1,5 х 1,5 - 2 шт.</td>
+																			<td class="table__col">-</td>
+																			<td class="table__col">-</td>
+																		</tr>
+																	</tbody>
+																</table>
+															</div>
+															<div class="section-inner__img">
+																<picture><source srcset="img/trapezoidal-windows/3.webp" type="image/webp"><img src="img/trapezoidal-windows/3.png" alt="" /></picture>
+															</div>
+														</div>
+													</div>
+													<div class="tabs__body_section">
+														<div class="block__title">
+															<i class="_icon-windows-2"></i>
+															<h4>Размеры круглых окон</h4>
+														</div>
+														<div class="section-inner">
+															<div class="section-inner__table">
+																<table class="table">
+																	<tbody class="table__body">
+																		<tr class="table__row">
+																			<td class="table__col">1 окно</td>
+																			<td class="table__col">1 х 1,5 х 1,5 - 2 шт.</td>
+																			<td class="table__col">-</td>
+																			<td class="table__col">-</td>
+																		</tr>
+																		<tr class="table__row">
+																			<td class="table__col">2 окно</td>
+																			<td class="table__col">1 х 1,5 х 1,5 - 2 шт.</td>
+																			<td class="table__col">-</td>
+																			<td class="table__col">-</td>
+																		</tr>
+																		<tr class="table__row">
+																			<td class="table__col">3 окно</td>
+																			<td class="table__col">1 х 1,5 х 1,5 - 2 шт.</td>
+																			<td class="table__col">-</td>
+																			<td class="table__col">-</td>
+																		</tr>
+																	</tbody>
+																</table>
+															</div>
+															<div class="section-inner__img">
+																<picture><source srcset="img/trapezoidal-windows/3.webp" type="image/webp"><img src="img/trapezoidal-windows/3.png" alt="" /></picture>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="tabs__body">
+												2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore odio exercitationem, excepturi similique nulla, voluptatem reprehenderit neque a minima eaque tenetur? Quos fugit
+												voluptate enim quo sed, minima error molestias!
+											</div>
+											<div class="tabs__body">
+												3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore odio exercitationem, excepturi similique nulla, voluptatem reprehenderit neque a minima eaque tenetur? Quos fugit
+												voluptate enim quo sed, minima error molestias!
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="tab-control">
+								<div class="tab-control__item">
+									<button type="button" class="tab-control__btn" onclick="plusSlide()">Подтвердить</button>
+								</div>
+
+								<div class="tab-control__item">
+									<button type="button" class="tab-control__btn solid" onclick="minusSlide()">Назад</button>
+									<button type="button" class="tab-control__btn" onclick="plusSlide()">Подтвердить</button>
+								</div>
+
+								<div class="tab-control__item">
+									<button type="button" class="tab-control__btn solid" onclick="minusSlide()">Назад</button>
+									<button type="button" class="tab-control__btn solid" onclick="plusSlide()">Пропустить</button>
+								</div>
+
+								<div class="tab-control__item active">
+									<button type="button" class="tab-control__btn solid" onclick="minusSlide()">Назад</button>
+									<button class="tab-control__btn">Отправить на e-mail</button>
+									<button class="tab-control__btn">открыть / скачать pdf</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__inner">
+					<div class="footer__top">
+						<div class="footer__item">
+							<h3 class="footer__item_title">Продукция</h3>
+							<ul class="footer__list">
+								<li class="footer__list_item"><a href="#" class="footer__list_link">Блоки полистиролбетон</a></li>
+								<li class="footer__list_item"><a href="#" class="footer__list_link">Перемычки полистиролбетон</a></li>
+								<li class="footer__list_item"><a href="#" class="footer__list_link">Раствор полистиролбетон</a></li>
+								<li class="footer__list_item"><a href="#" class="footer__list_link">Сопутствующие материалы</a></li>
+								<li class="footer__list_item"><a href="#" class="footer__list_link">Клей для кладки блока</a></li>
+								<li class="footer__list_item"><a href="#" class="footer__list_link">Сетка для кладки блока</a></li>
+								<li class="footer__list_item"><a href="#" class="footer__list_link">Прайс-лист</a></li>
+							</ul>
+						</div>
+
+						<div class="footer__item">
+							<h3 class="footer__item_title">Применение</h3>
+							<ul class="footer__list">
+								<li class="footer__list_item"><a href="#" class="footer__list_link">Несущие стены</a></li>
+								<li class="footer__list_item"><a href="#" class="footer__list_link">Внутренние несущие стены</a></li>
+								<li class="footer__list_item"><a href="#" class="footer__list_link">Перегородки</a></li>
+								<li class="footer__list_item"><a href="#" class="footer__list_link">Перекрытия</a></li>
+								<li class="footer__list_item"><a href="#" class="footer__list_link">Теплая стяжка пола</a></li>
+								<li class="footer__list_item"><a href="#" class="footer__list_link">Утепление полистиролбетоном</a></li>
+								<li class="footer__list_item"><a href="#" class="footer__list_link">Кладка блока инструкция</a></li>
+								<li class="footer__list_item"><a href="#" class="footer__list_link">Кладка перемычки инструкция</a></li>
+								<li class="footer__list_item"><a href="#" class="footer__list_link">Фотогалерея</a></li>
+							</ul>
+						</div>
+
+						<div class="footer__item">
+							<h3 class="footer__item_title">О полистиролбетоне</h3>
+							<ul class="footer__list">
+								<li class="footer__list_item"><a href="#" class="footer__list_link">Преимущества</a></li>
+								<li class="footer__list_item"><a href="#" class="footer__list_link">Характеристики</a></li>
+								<li class="footer__list_item"><a href="#" class="footer__list_link">Свойства полистиролбетона</a></li>
+								<li class="footer__list_item"><a href="#" class="footer__list_link">Сертификаты соответствия</a></li>
+								<li class="footer__list_item"><a href="#" class="footer__list_link">Сравнение с другими блоками</a></li>
+								<li class="footer__list_item"><a href="#" class="footer__list_link">Таблица сравнений блоков</a></li>
+								<li class="footer__list_item"><a href="#" class="footer__list_link">Какие блоки лучше</a></li>
+								<li class="footer__list_item"><a href="#" class="footer__list_link">Отзывы</a></li>
+								<li class="footer__list_item"><a href="#" class="footer__list_link green">Экологичность</a></li>
+							</ul>
+						</div>
+
+						<div class="footer__item">
+							<h3 class="footer__item_title">Строительство</h3>
+							<ul class="footer__list">
+								<li class="footer__list_item">
+									<a href="#" class="footer__list_link">Авторские проекты домов <br />
+										из полистиролбетона</a>
+								</li>
+								<li class="footer__list_item"><a href="#" class="footer__list_link">Архитектура/проектирование</a></li>
+								<li class="footer__list_item"><a href="#" class="footer__list_link">Проекты домов</a></li>
+								<li class="footer__list_item"><a href="#" class="footer__list_link">Этапы строительства</a></li>
+								<li class="footer__list_item"><a href="#" class="footer__list_link">Проектным иснтитутам</a></li>
+								<li class="footer__list_item">
+									<a href="#" class="footer__list_link">Застройщикам гражданского <br />
+										назначения</a>
+								</li>
+								<li class="footer__list_item"><a href="#" class="footer__list_link">Технология пассивный дом</a></li>
+							</ul>
+						</div>
+
+						<div class="footer__item">
+							<h3 class="footer__item_title">Завод полистиролбетон</h3>
+							<ul class="footer__list">
+								<li class="footer__list_item"><a href="#" class="footer__list_link">Полистиролбетон от производителя в Краснодаре</a></li>
+								<li class="footer__list_item"><a href="#" class="footer__list_link">Экскурсии по заводу</a></li>
+								<li class="footer__list_item"><a href="#" class="footer__list_link">Доставка блоков</a></li>
+								<li class="footer__list_item"><a href="#" class="footer__list_link">Приехать к нам</a></li>
+								<li class="footer__list_item">
+									<a href="#" class="footer__list_link">Доставка укладка раствора <br />
+										цена от 3 700р. за м3</a>
+								</li>
+								<li class="footer__list_item">
+									<a href="#" class="footer__list_link data"><i class="_icon-location"></i> г. Краснодар, ст. Марьянская, ул. Соболя, 1/1</a>
+								</li>
+								<li class="footer__list_item">
+									<a href="#" class="footer__list_link data"><i class="_icon-clock"></i> Пн. - Пт. с 9:0 до 17:00</a>
+								</li>
+								<li class="footer__list_item">
+									<a href="#" class="footer__list_link data"><i class="_icon-phone"></i> +7 (861) 70-00-25 +7(918) 37-75-85</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer__bottom">
+						<div class="footer__wrapper">
+							<div class="footer__logo">
+								<a href="#" class="footer__link">Завод полистиролбетон</a>
+							</div>
+							<p class="footer__textup">
+								© 2011-2019 Завод полистиролбетонных изделий - Все права защищены | полистиролбетон | <a href="#">карта сайта</a> | <a href="#"><i class="_icon-like"></i> сказать спасибо</a>
+							</p>
+						</div>
+						<p class="footer__text">Производитель изделий из полистиролбетона, блок, перемычки, жидкий раствор.</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+	</div>
+	<script src="js/app.min.js?_v=20220701090756"></script>
+
+</body>
+
+</html>
