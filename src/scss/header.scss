@@ -52,6 +52,7 @@
 .header {
 	border-bottom: 1px solid $grey;
 	padding-top: 12px;
+	background-color: #fff;
 
 	// .header__inner
 
@@ -191,5 +192,44 @@
 	&__link {
 		font-size: rem(12);
 		text-transform: uppercase;
+	}
+}
+
+.header-padding {
+	padding-top: 128px;
+}
+
+._header-scroll {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 8;
+	.header__top {
+		align-items: center;
+	}
+	.header__logo {
+		width: 264px;
+		img,
+		picture {
+			object-fit: contain;
+			object-position: center;
+			width: inherit;
+		}
+	}
+	.data-header__clock {
+		display: none;
+	}
+	.header__call {
+		column-gap: 31px;
+		flex-direction: row;
+		align-items: center;
+	}
+	.header__number {
+		font-size: rem(16);
+		font-weight: 600;
+	}
+	.header__inner i {
+		font-size: rem(15);
 	}
 }

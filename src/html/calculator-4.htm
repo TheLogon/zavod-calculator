@@ -1,0 +1,55 @@
+<div class="calc">
+	<div data-tabs class="tabs">
+		<nav data-tabs-titles class="tabs__navigation">
+			<button type="submit" class="tabs__title _tab-active">
+				<div class="block__title">
+					<img src="@img/icons/edit.svg" alt="" />
+					<h4>Введенные данные для расчета</h4>
+				</div>
+				<i class="_icon-arrow-down"></i>
+			</button>
+			<button type="submit" class="tabs__title">
+				<div class="block__title">
+					<div class="block__title_icon">
+						<img src="@img/icons/table.svg" alt="" /> <span class="block__title_slesh">/</span>
+						<img src="@img/icons/clipboard.svg" alt="" />
+					</div>
+					<h4>краткий РАСЧЕТ</h4>
+				</div>
+				<i class="_icon-arrow-down"></i>
+			</button>
+			<button type="submit" class="tabs__title">
+				<div class="block__title">
+					<img src="@img/icons/clipboard.svg" alt="" />
+					<h4>ДЕТАЛЬНЫЙ РАСЧЕТ</h4>
+				</div>
+				<i class="_icon-arrow-down"></i>
+			</button>
+		</nav>
+		<div class="tabs-head">
+			<div class="tabs-head__item">
+				<img src="@img/plans/1.svg" alt="" />
+				<p>Наружные несущие стены</p>
+			</div>
+			<div class="tabs-head__item">
+				<img src="@img/plans/2.svg" alt="" />
+				<p>Внутренние несущие стены</p>
+			</div>
+			<div class="tabs-head__item">
+				<img src="@img/plans/3.svg" alt="" />
+				<p>Внутренние перегородки</p>
+			</div>
+		</div>
+		<div data-tabs-body class="tabs__content">
+			<div class="tabs__body">@@include('/tab.htm',{})</div>
+			<div class="tabs__body">
+				2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore odio exercitationem, excepturi similique nulla, voluptatem reprehenderit neque a minima eaque tenetur? Quos fugit
+				voluptate enim quo sed, minima error molestias!
+			</div>
+			<div class="tabs__body">
+				3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore odio exercitationem, excepturi similique nulla, voluptatem reprehenderit neque a minima eaque tenetur? Quos fugit
+				voluptate enim quo sed, minima error molestias!
+			</div>
+		</div>
+	</div>
+</div>

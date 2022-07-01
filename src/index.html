@@ -1,6 +1,56 @@
 <!DOCTYPE html>
 <html lang="ru">
 	@@include('html/_head.htm',{ "title":"Главная" })
+	<script>
+		console.log("загрузились")
+
+		var slideIndex = 1
+		showSlides(slideIndex)
+
+		/* Функция увеличивает индекс на 1, показывает следующй слайд*/
+		function plusSlide() {
+			showSlides((slideIndex += 1))
+		}
+
+		/* Функция уменьшяет индекс на 1, показывает предыдущий слайд*/
+		function minusSlide() {
+			showSlides((slideIndex -= 1))
+			var tabs = document.getElementsByClassName("progtrckr-item")
+			for (i = 0; i < tabs.length; i++) {
+				tabs[slideIndex].className = tabs[slideIndex].className.replace(" active", "")
+			}
+		}
+
+		/* Устанавливает текущий слайд */
+		function currentSlide(n) {
+			showSlides((slideIndex = n))
+		}
+
+		/* Основная функция слайдера */
+		function showSlides(n) {
+			var i
+			var slides = document.getElementsByClassName("tab")
+			var dots = document.getElementsByClassName("tab-control__item")
+			var tabs = document.getElementsByClassName("progtrckr-item")
+			if (n > slides.length) {
+				slideIndex = 1
+			}
+			if (n < 1) {
+				slideIndex = slides.length
+			}
+			for (i = 0; i < slides.length; i++) {
+				// slides[i].style.display = "none"
+				slides[i].className = slides[i].className.replace(" active", "")
+			}
+			for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" active", "")
+			}
+			// slides[slideIndex - 1].style.display = "block"
+			slides[slideIndex - 1].className += " active"
+			dots[slideIndex - 1].className += " active"
+			tabs[slideIndex - 1].className += " active"
+		}
+	</script>
 	<body>
 		<div class="wrapper">
 			@@include('html/_header.htm',{})
@@ -26,29 +76,62 @@
 						</div>
 					</div>
 				</section>
+
 				<section class="calculator">
 					<div class="calculator__container">
 						<div class="calculator__inner">
 							<div class="culculator__head">
 								<ol class="progtrckr" data-progtrckr-steps="4">
 									<li class="progtrckr-item active">Наружные несущие стены</li>
-									<li class="progtrckr-item">Внутренние несущие стены</li>
-									<li class="progtrckr-item">Внутренние перегородки</li>
-									<li class="progtrckr-item">Отсчет по расчету</li>
+									<li class="progtrckr-item active">Внутренние несущие стены</li>
+									<li class="progtrckr-item active">Внутренние перегородки</li>
+									<li class="progtrckr-item active">Отсчет по расчету</li>
 								</ol>
 							</div>
 							<form action="#" class="calculator__form">
-								<div class="tab active">
+								<div class="tab">
 									<div class="tab__title">
 										<img src="@img/plans/1.svg" alt="" />
 										<h2>Наружные несущие стены</h2>
 									</div>
 									@@include('html/calculator-1.htm',{})
 								</div>
-								<div class="tab">@@include('html/calculator-2.htm',{})</div>
-								<div class="tab">@@include('html/calculator-3.htm',{})</div>
-								<div class="tab">@@include('html/calculator-4.1.htm',{})</div>
-								<div class="tab">@@include('html/calculator-4.2.htm',{})</div>
+								<div class="tab">
+									<div class="tab__title">
+										<img src="@img/plans/2.svg" alt="" />
+										<h2>Внутренние несущие стены</h2>
+									</div>
+									@@include('html/calculator-2.htm',{})
+								</div>
+								<div class="tab">
+									<div class="tab__title">
+										<img src="@img/plans/3.svg" alt="" />
+										<h2>Внутренние перегородки</h2>
+									</div>
+									@@include('html/calculator-3.htm',{})
+								</div>
+								<div class="tab active">@@include('html/calculator-4.htm',{})</div>
+								<div class="tab-control">
+									<div class="tab-control__item">
+										<button type="button" class="tab-control__btn" onclick="plusSlide()">Подтвердить</button>
+									</div>
+
+									<div class="tab-control__item">
+										<button type="button" class="tab-control__btn solid" onclick="minusSlide()">Назад</button>
+										<button type="button" class="tab-control__btn" onclick="plusSlide()">Подтвердить</button>
+									</div>
+
+									<div class="tab-control__item">
+										<button type="button" class="tab-control__btn solid" onclick="minusSlide()">Назад</button>
+										<button type="button" class="tab-control__btn solid" onclick="plusSlide()">Пропустить</button>
+									</div>
+
+									<div class="tab-control__item active">
+										<button type="button" class="tab-control__btn solid" onclick="minusSlide()">Назад</button>
+										<button class="tab-control__btn">Отправить на e-mail</button>
+										<button class="tab-control__btn">открыть / скачать pdf</button>
+									</div>
+								</div>
 							</form>
 						</div>
 					</div>
